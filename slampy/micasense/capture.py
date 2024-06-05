@@ -27,10 +27,10 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
-import micasense.image as image
-import micasense.dls as dls
-import micasense.plotutils as plotutils
-import micasense.imageutils as imageutils
+import slampy.micasense.image as image
+import slampy.micasense.dls as dls
+import slampy.micasense.plotutils as plotutils
+import slampy.micasense.imageutils as imageutils
 import math
 import numpy as np
 import cv2
@@ -310,7 +310,7 @@ class Capture(object):
         return albedos
 
     def detect_panels(self):
-        from micasense.panel import Panel
+        from slampy.micasense.panel import Panel
         if self.panels is not None and self.detected_panel_count == len(self.images):
             return self.detected_panel_count
         self.panels = [Panel(img,panelCorners=pc) for img,pc in zip(self.images,self.panelCorners)]

@@ -32,9 +32,9 @@ import math
 import numpy as np
 
 import matplotlib.pyplot as plt
-import micasense.plotutils as plotutils
-import micasense.metadata as metadata
-import micasense.dls as dls
+import slampy.micasense.plotutils as plotutils
+import slampy.micasense.metadata as metadata
+import slampy.micasense.dls as dls
 
 #helper function to convert euler angles to a rotation matrix
 def rotations_degrees_to_rotation_matrix(rotation_degrees):

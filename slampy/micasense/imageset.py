@@ -28,9 +28,9 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 import os, glob, fnmatch
-import micasense.image as image
-import micasense.capture as capture
-from micasense.imageutils import save_capture as save_capture
+import slampy.micasense.image as image
+import slampy.micasense.capture as capture
+from slampy.micasense.imageutils import save_capture as save_capture
 import multiprocessing
 
 import exiftool

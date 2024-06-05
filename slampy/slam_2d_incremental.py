@@ -12,10 +12,10 @@ import numpy as np
 from rtree import index as rtindex
 
 import OpenVisus as Visus
-import micasense.capture
-import micasense.dls
-import micasense.image
-import micasense.panel
+import slampy.micasense.capture
+import slampy.micasense.dls
+import slampy.micasense.image
+import slampy.micasense.panel
 import slampy.image_provider as img_utils
 from slampy.extract_keypoints import ExtractKeyPoints
 from slampy.find_matches import FindMatches

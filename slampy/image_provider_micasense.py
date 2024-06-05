@@ -3,14 +3,14 @@ import sys,os,platform,math
 # this is needed to find micasense module
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-import micasense
-import micasense.utils 
-import micasense.metadata
-import micasense.plotutils
-import micasense.image 
-import micasense.imageutils
-import micasense.panel 
-import micasense.capture 
+import slampy.micasense
+import slampy.micasense.utils 
+import slampy.micasense.metadata
+import slampy.micasense.plotutils
+import slampy.micasense.image 
+import slampy.micasense.imageutils
+import slampy.micasense.panel 
+import slampy.micasense.capture 
 import numpy as np
 
 from slampy.image_provider import *

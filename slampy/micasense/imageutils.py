@@ -152,7 +152,7 @@ def align(pair):
             grad2 = gradient(gray2_pyr[level])
 
             if show_debug_images:
-                import micasense.plotutils as plotutils
+                import slampy.micasense.plotutils as plotutils
                 plotutils.plotwithcolorbar(gray1_pyr[level], "ref level {}".format(level))
                 plotutils.plotwithcolorbar(gray2_pyr[level], "match level {}".format(level))
                 plotutils.plotwithcolorbar(grad1, "ref grad level {}".format(level))
@@ -419,7 +419,7 @@ def map_points(pts, image_size, warpMatrix, distortion_coeffs, camera_matrix,war
         return new_pts[:,0,:]
 
 def save_capture(params):
-    import micasense.capture as capture
+    import slampy.micasense.capture as capture
     cap = capture.Capture.from_filelist(params['file_list'])
     outputFilename = cap.uuid+'.tif'
     if(os.path.exists(outputFilename) and params['overwrite_existing']==False):
