@@ -365,15 +365,12 @@ class Slam2DIncremental(Visus.Slam):
         return 0
 
     def adjust_image_yaw(self, image):
-        if self.multi_band:
-            image.yaw -= self.provider.yaw_offset / 2
-        else:
-            image.yaw += self.provider.yaw_offset
-            offset = 2 * np.pi
-            while image.yaw > np.pi:
-                image.yaw -= offset
-            while image.yaw < -np.pi:
-                image.yaw += offset
+        image.yaw += self.provider.yaw_offset
+        offset = 2 * np.pi
+        while image.yaw > np.pi:
+            image.yaw -= offset
+        while image.yaw < -np.pi:
+            image.yaw += offset
         logging.info(
             f"{image.filenames[0]} - {image.yaw} radians {np.degrees(image.yaw)} degrees"
         )
