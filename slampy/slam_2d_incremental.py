@@ -12,6 +12,7 @@ import numpy as np
 from rtree import index as rtindex
 
 import OpenVisus as Visus
+import slampy.micasense as micasense
 import slampy.micasense.capture
 import slampy.micasense.dls
 import slampy.micasense.image

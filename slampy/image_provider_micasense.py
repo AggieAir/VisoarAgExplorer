@@ -3,7 +3,7 @@ import sys,os,platform,math
 # this is needed to find micasense module
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-import slampy.micasense
+import slampy.micasense as micasense
 import slampy.micasense.utils 
 import slampy.micasense.metadata
 import slampy.micasense.plotutils
